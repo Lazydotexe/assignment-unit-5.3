@@ -32,12 +32,13 @@ function addToCollection(title, artist, yearPublished) { // a function that take
 //.................................................................................................................................................................................
 
 
-console.log(addToCollection("Jah won't pay the bills, 'Sublime", 1991));
+console.log(addToCollection("Jah won't pay the bills", 'Sublime', 1991));
 console.log(addToCollection('...And Justice for All', 'Metallica', 1988));
 console.log(addToCollection('Hotel California', 'Eagles', 1976));
 console.log(addToCollection('Ten', 'Pearl Jam', 2000));
 console.log(addToCollection('Only by the Night', 'Kings of leon', 2008));
 console.log(addToCollection('Young the Giant', 'Young the Giant', 2010));
+console.log(addToCollection('Metallica', 'Metallica', 1991));
 console.log(collection);
 
 
@@ -82,9 +83,32 @@ function findByArtist(artist) { // sets a function that takes the property 'arti
 
 //.................................................................................................................................................................................
 
-function search(artist, yearPublished) {
+let newAlbum = [];
 
-}
+function search(artist, year) {
+   newAlbum = [];
+  
+    for (let i = 0; i < collection.length; i++) {
+      if (collection[i].artist === artist && collection[i].yearPublished === year) {
+        newAlbum.push(collection[i].title);
+      } else if (collection[i].yearPublished === artist) {
+        newAlbum.push(collection[i].title);
+      } else if (!year && collection[i].artist === artist) {
+        newAlbum.push(collection[i].title);
+      } else if (!artist && !year) {
+        newAlbum.push(collection[i].title);
+      }
+    }
+  
+    return newAlbum;
+  }
+
+console.log(search('Metallica'));
+console.log(search('Eagles', 1976));
+console.log(search(1991));
+
+
+
 
 
 
