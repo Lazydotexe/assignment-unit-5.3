@@ -69,16 +69,16 @@ function findByArtist(artist) { // sets a function that takes the property 'arti
         return newArr;// if no artist is matched then the array is returned empty
     }
 
-    //side note. I hade the return statement one { up and was not getting the results i wanted. 3 hours in i figured out it needed to be one { down
+    //side note. I had the return statement one { up and was not getting the results i wanted. 3 hours in i figured out it needed to be one { down
 
     
    
 
-findByArtist('jon');
-findByArtist('Sublime');
-findByArtist('Metallica');
-findByArtist('Eagles');
-console.log(newArr);
+// findByArtist('jon');
+// findByArtist('Sublime');
+// findByArtist('Metallica');
+// findByArtist('Eagles');
+// console.log(newArr);
 
 
 
