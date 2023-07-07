@@ -17,27 +17,27 @@ function addToCollection(title, artist, yearPublished) { // a function that take
 // I actually got the below idea from helping Ryan. They both do the same thing. Not sure what it best practice.
 
 // function addToCollection(title, artist, yearPublished) {
-//     const record = {
+//     const album = {
 //       title: title,
 //       artist: artist,
 //       yearPublished: yearPublished
 //     };
   
     
-//     collection.push(record);
+//     collection.push(album);
   
     
-//     return record;
+//     return album;
 //   }
 //.................................................................................................................................................................................
 
 
-console.log(addToCollection('Badfish', 'Sublime', 1991));
-console.log(addToCollection('One', 'Metallica', 1988));
+console.log(addToCollection("Jah won't pay the bills, 'Sublime", 1991));
+console.log(addToCollection('...And Justice for All', 'Metallica', 1988));
 console.log(addToCollection('Hotel California', 'Eagles', 1976));
-console.log(addToCollection('Yellow Ledbetter', 'Pearl Jam', 2000));
-console.log(addToCollection('Sex on fire', 'Kings of leon', 2008));
-console.log(addToCollection('My body', 'Young the Giant', 2010));
+console.log(addToCollection('Ten', 'Pearl Jam', 2000));
+console.log(addToCollection('Only by the Night', 'Kings of leon', 2008));
+console.log(addToCollection('Young the Giant', 'Young the Giant', 2010));
 console.log(collection);
 
 
@@ -79,6 +79,12 @@ function findByArtist(artist) { // sets a function that takes the property 'arti
 // findByArtist('Metallica');
 // findByArtist('Eagles');
 // console.log(newArr);
+
+//.................................................................................................................................................................................
+
+function search(artist, yearPublished) {
+
+}
 
 
 
