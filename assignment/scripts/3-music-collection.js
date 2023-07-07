@@ -32,7 +32,7 @@ function addToCollection(title, artist, yearPublished) { // a function that take
 //.................................................................................................................................................................................
 
 
-console.log(addToCollection('Badfish', 'sublime', 1991));
+console.log(addToCollection('Badfish', 'Sublime', 1991));
 console.log(addToCollection('One', 'Metallica', 1988));
 console.log(addToCollection('Hotel California', 'Eagles', 1976));
 console.log(addToCollection('Yellow Ledbetter', 'Pearl Jam', 2000));
@@ -55,7 +55,30 @@ showCollection(collection);
 
 //.................................................................................................................................................................................
 
+const newArr = [];
 
+function findByArtist(artist) { // sets a function that takes the property 'artist'
+    for (let i = 0; i < collection.length; i++) { //for loop the starts at 0 and adds 1 every itteration
+        if (collection[i].artist === artist) { // compares collection array at index [i] coupled with 'artist' property in the object to the 'artist' input from the function
+            newArr.push(artist); // if true then the .push will add that artist  to the newArr
+            
+            
+        } 
+            
+        }
+        return newArr;// if no artist is matched then the array is returned empty
+    }
+
+    //side note. I hade the return statement one { up and was not getting the results i wanted. 3 hours in i figured out it needed to be one { down
+
+    
+   
+
+findByArtist('jon');
+findByArtist('Sublime');
+findByArtist('Metallica');
+findByArtist('Eagles');
+console.log(newArr);
 
 
 
