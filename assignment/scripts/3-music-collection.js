@@ -10,19 +10,18 @@ function addToCollection(title, artist, yearPublished) { // a function that take
         "artist": artist,// these three lines have 3 different properties that will use whatever value you plugged into the function property.
         "yearPublished": yearPublished
     });
-    return collection[collection.length - 1] //this line will return the last object you have "pushed" to the array.
+    return collection[collection.length - 1]; //this line will return the last object you have "pushed" to the array.
 }
 //.................................................................................................................................................................................
 
 
-addToCollection('Badfish', 'sublime', 1991)
-addToCollection('One', 'Metallica', 1988)
-addToCollection('Hotel California', 'Eagles', 1976)
-addToCollection('Yellow Ledbetter', 'Pearl Jam', 2000)
-// let record5 = addToCollection('My body', 'Young the Giant', 2010)
-addToCollection('Sex on fire', 'Kings of leon', 2008)
-// console.log(collection);
-// console.log(record5)
+console.log(addToCollection('Badfish', 'sublime', 1991));
+console.log(addToCollection('One', 'Metallica', 1988));
+console.log(addToCollection('Hotel California', 'Eagles', 1976));
+console.log(addToCollection('Yellow Ledbetter', 'Pearl Jam', 2000));
+console.log(addToCollection('Sex on fire', 'Kings of leon', 2008));
+console.log(collection);
+
 
 //.................................................................................................................................................................................
 
