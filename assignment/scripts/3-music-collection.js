@@ -83,19 +83,19 @@ function findByArtist(artist) { // sets a function that takes the property 'arti
 
 //.................................................................................................................................................................................
 
-let newAlbum = [];
+let newAlbum = [];//sets empty array
 
-function search(artist, year) {
-   newAlbum = [];
+function search(artist, year) {//function that takes two perameters
+   newAlbum = [];//resets the array to empty when its reused
   
-    for (let i = 0; i < collection.length; i++) {
-      if (collection[i].artist === artist && collection[i].yearPublished === year) {
-        newAlbum.push(collection[i].title);
-      } else if (collection[i].yearPublished === artist) {
-        newAlbum.push(collection[i].title);
-      } else if (!year && collection[i].artist === artist) {
-        newAlbum.push(collection[i].title);
-      } else if (!artist && !year) {
+    for (let i = 0; i < collection.length; i++) {//iterates through the collection array
+      if (collection[i].artist === artist && collection[i].yearPublished === year) {//is [i].artist === artist AND is [i].yearPublished === year
+        newAlbum.push(collection[i].title); //if yes then push [i].title to empty array
+      } else if (collection[i].yearPublished === artist) {//if only a year is entered then it takes the 'artist' perameter spot and is compared to [i].yearPublished
+        newAlbum.push(collection[i].title);//if yes then push [i].title for whatever year entered
+      } else if (!year && collection[i].artist === artist) {//if there is not 'year' perameter entered then it only checks against [i].artist
+        newAlbum.push(collection[i].title);//if true it returns all titles by 'artist'
+      } else if (!artist && !year) {//if no input is entered then it will return ALL titles in the array.
         newAlbum.push(collection[i].title);
       }
     }
