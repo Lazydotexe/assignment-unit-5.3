@@ -12,6 +12,23 @@ function addToCollection(title, artist, yearPublished) { // a function that take
     });
     return collection[collection.length - 1]; //this line will return the last object you have "pushed" to the array.
 }
+
+
+// I actually got the below idea from helping Ryan. They both do the same thing. Not sure what it best practice.
+
+// function addToCollection(title, artist, yearPublished) {
+//     const record = {
+//       title: title,
+//       artist: artist,
+//       yearPublished: yearPublished
+//     };
+  
+    
+//     collection.push(record);
+  
+    
+//     return record;
+//   }
 //.................................................................................................................................................................................
 
 
@@ -20,6 +37,7 @@ console.log(addToCollection('One', 'Metallica', 1988));
 console.log(addToCollection('Hotel California', 'Eagles', 1976));
 console.log(addToCollection('Yellow Ledbetter', 'Pearl Jam', 2000));
 console.log(addToCollection('Sex on fire', 'Kings of leon', 2008));
+console.log(addToCollection('My body', 'Young the Giant', 2010));
 console.log(collection);
 
 
