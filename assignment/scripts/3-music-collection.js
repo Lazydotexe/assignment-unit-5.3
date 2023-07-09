@@ -112,7 +112,7 @@ function search(artist, year, trackName) {
 
 console.log(search('Pearl Jam', 2000, 'Yellow Ledbetter'));
 console.log(search('Sublime', 1991,));
-console.log(search('Metallica', 1988));
+console.log(search('Metallica', 1988, 'Nothing Else Matters'));
 
 //I THINK this is what the stretch goal was asking for but i'm not sure. 
 
