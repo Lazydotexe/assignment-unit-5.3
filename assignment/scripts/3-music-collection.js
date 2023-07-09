@@ -40,7 +40,7 @@ console.log(addToCollection('Ten', 'Pearl Jam', 2000, 'Yellow Ledbetter', '5:03'
 console.log(addToCollection('Only by the Night', 'Kings of leon', 2008, 'Sex on fire', '3:23'));
 console.log(addToCollection('Young the Giant', 'Young the Giant', 2010, 'My Body', '4:04'));
 console.log(addToCollection('Metallica', 'Metallica', 1991, 'My Friend Misery', '6:49'));
-// console.log(collection);
+console.log(collection);
 
 
 //.................................................................................................................................................................................
@@ -54,7 +54,7 @@ function showCollection(arr) { //function 'showCollection' that takes one perame
     return console.log(arr.length); //this line will just return the length of whatever property (array) you use
 }
 
-// showCollection(collection);
+showCollection(collection);
 
 //.................................................................................................................................................................................
 
