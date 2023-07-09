@@ -40,7 +40,7 @@ console.log(addToCollection('Ten', 'Pearl Jam', 2000, 'Yellow Ledbetter', '5:03'
 console.log(addToCollection('Only by the Night', 'Kings of leon', 2008, 'Sex on fire', '3:23'));
 console.log(addToCollection('Young the Giant', 'Young the Giant', 2010, 'My Body', '4:04'));
 console.log(addToCollection('Metallica', 'Metallica', 1991, 'My Friend Misery', '6:49'));
-console.log(collection);
+// console.log(collection);
 
 
 //.................................................................................................................................................................................
@@ -54,19 +54,18 @@ function showCollection(arr) { //function 'showCollection' that takes one perame
     return console.log(arr.length); //this line will just return the length of whatever property (array) you use
 }
 
-showCollection(collection);
+// showCollection(collection);
 
 //.................................................................................................................................................................................
 
-const newArr = [];
+let newArr = [];
 
 function findByArtist(artist) { // sets a function that takes the property 'artist'
+  newArr = [];
     for (let i = 0; i < collection.length; i++) { //for loop the starts at 0 and adds 1 every itteration
         if (collection[i].artist === artist) { // compares collection array at index [i] coupled with 'artist' property in the object to the 'artist' input from the function
-            newArr.push(artist); // if true then the .push will add that artist  to the newArr
-            
-            
-        } 
+            newArr.push(collection[i]); // if true then the .push will add that artist  to the newArr
+          } 
             
         }
         return newArr;// if no artist is matched then the array is returned empty
@@ -77,11 +76,11 @@ function findByArtist(artist) { // sets a function that takes the property 'arti
     
    
 
-// findByArtist('jon');
-// findByArtist('Sublime');
-// findByArtist('Metallica');
-// findByArtist('Eagles');
-// console.log(newArr);
+    
+console.log(findByArtist('Sublime'));
+console.log(findByArtist('Young the Giant'));
+console.log(findByArtist('Bob'));
+
 
 //.................................................................................................................................................................................
 
