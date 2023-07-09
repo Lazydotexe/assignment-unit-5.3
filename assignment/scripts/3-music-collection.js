@@ -85,33 +85,36 @@ function findByArtist(artist) { // sets a function that takes the property 'arti
 
 //.................................................................................................................................................................................
 
-let newAlbum = [];//sets empty array
 
-function search(artist, year, trackName) {//function that takes two perameters
-   newAlbum = [];//resets the array to empty when its reused
+
+let newAlbum = [];
+
+function search(artist, year, trackName) {
+  newAlbum = [];
+   
   
-    for (let i = 0; i < collection.length; i++) {//iterates through the collection array
-      if (collection[i].tracks[0] === artist || year || trackName) {
-        newAlbum.push(collection[i].tracks)
+    for (let i = 0; i < collection.length; i++) {
+      if (trackName === collection[i].tracks[0]) {
+        newAlbum.push(collection[i].tracks[0]); 
         return newAlbum;
-      } else if (collection[i].artist === artist && collection[i].yearPublished === year) {//is [i].artist === artist AND is [i].yearPublished === year
-        newAlbum.push(collection[i].title); //if yes then push [i].title to empty array
-      } else if (collection[i].yearPublished === artist) {//if only a year is entered then it takes the 'artist' perameter spot and is compared to [i].yearPublished
-        newAlbum.push(collection[i].title);//if yes then push [i].title for whatever year entered
-      } else if (!year && collection[i].artist === artist) {//if there is not 'year' perameter entered then it only checks against [i].artist
-        newAlbum.push(collection[i].title);//if true it returns all titles by 'artist'
-      } else if (!artist && !year) {//if no input is entered then it will return ALL titles in the array.
+      } else if (artist === collection[i].artist && year === collection[i].yearPublished) {
         newAlbum.push(collection[i].title);
+        newAlbum.push(collection[i].yearPublished);
+      } else if (!artist && !year && !trackName) {
+        newAlbum.push(collection[i].title);
+        newAlbum.push(collection[i].yearPublished);
       }
     }
   
     return newAlbum;
   }
+ 
 
-// console.log(search('Metallica'));
-// console.log(search('Eagles', 1976));
-// console.log(search('Badfish'));
+console.log(search('Pearl Jam', 2000, 'Yellow Ledbetter'));
+console.log(search('Sublime', 1991,));
+console.log(search('Metallica', 1988));
 
+//I THINK this is what the stretch goal was asking for but i'm not sure. 
 
 
 
